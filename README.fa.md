@@ -120,10 +120,4 @@ WP-Cron با بازدید اجرا می‌شود. برای سایت کم‌تر�
 
 منتشرشده تحت [GPL-2.0-or-later](https://www.gnu.org/licenses/gpl-2.0.html).
 
-<div align="center">
-
-ساخته و نگهداری‌شده توسط **Hamid Ahangaryan** · [ahangaryan.ir](https://ahangaryan.ir)
-
-</div>
-
 </div>

@@ -117,9 +117,3 @@ Yes. Fields detected on the post, including custom ones, can be targeted with a 
 ## License
 
 Released under the [GPL-2.0-or-later](https://www.gnu.org/licenses/gpl-2.0.html) license.
-
-<div align="center">
-
-Built and maintained by **Hamid Ahangaryan** · [ahangaryan.ir](https://ahangaryan.ir)
-
-</div>
