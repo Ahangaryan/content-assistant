@@ -3,7 +3,7 @@ Contributors: hamid-ahangaryan
 Author: Hamid Ahangaryan
 Author URI: https://ahangaryan.ir
 Plugin URI: https://ahangaryan.ir
-Tags: ai, content, generator, seo, persian, bilingual
+Tags: ai, content, automation, seo, bilingual
 Requires at least: 5.8
 Tested up to: 6.7
 Requires PHP: 7.4
@@ -11,65 +11,79 @@ Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-افزونه هوش مصنوعی برای وردپرس: تولید محتوای زمان‌بندی‌شدهٔ روزانه، ویرایش گروهی، پنل هوشمند داخل ویرایشگر و بهبود سئو. رابط دوزبانه (فارسی/انگلیسی).
+دستیار محتوا برای وردپرس: نوشتن، بازنویسی و بهبود متن با هر سرویس سازگار با OpenAI، از داخل ویرایشگر و از روی زمان‌بندی.
 
 == Description ==
 
-**هوش مصنوعی برای وردپرس** افزونه‌ای از [Hamid Ahangaryan](https://ahangaryan.ir) است که وردپرس را به API سازگار با OpenAI (مثل گپ جی‌پی‌تی) وصل می‌کند و امکانات زیر را می‌دهد:
+افزونه وردپرس را به یک سرویس سازگار با OpenAI وصل می‌کند تا نوشتن و ویرایش محتوا از چند مسیر ساده انجام شود. لازم نیست برای هر کار کوچک بین صفحه‌ها جابه‌جا شوی؛ هر جا متن می‌نویسی، همان‌جا می‌توانی پیشنهاد بگیری، بازنویسی کنی یا کیفیت سئوی مطلب را بسنجی.
 
-* **رابط کاملاً دوزبانه (فارسی / انگلیسی):** همهٔ بخش‌ها — تنظیمات، زمان‌بندی، ویرایش گروهی، لاگ و پنل هوشمند — هم ترجمهٔ فارسی و هم انگلیسی دارند. زبان از تنظیمات زبان وردپرس پیروی می‌کند یا با سوییچر بالای هر صفحه فوراً قابل تغییر است. پشتیبانی کامل RTL و LTR.
-* **صفحهٔ تنظیمات مدرن:** کلید API (با نمایش وضعیت و دکمهٔ نمایش/مخفی)، آدرس سرویس، مدل، دما، زبان محتوا، زبان رابط و دکمهٔ تست اتصال با بازخورد فوری.
-* **زمان‌بندی تولید روزانه:** برای هر پست‌تایپ می‌توانید تعداد پست در روز، فاصلهٔ زمانی (بازهٔ شروع/پایان) یا زمان‌های مشخص (مثلاً 08:00,12:30,18:00) و موضوعات قابل تعیین تعیین کنید. اجرا با WP-Cron (هر ۵ دقیقه) و امکان تولید آزمایشی فوری. نمایش اسلات‌های امروز به‌صورت بصری.
-* **ویرایش گروهی:** پست‌های بدون محتوا/عنوان/خلاصه/تصویر شاخص/توضیح متا را با فیلتر پیدا کنید و دسته‌جمعی محتوا تولید کنید، عنوان درست کنید یا سئو را بهبود دهید — با نوار پیشرفت و لاگ زنده.
-* **پنل هوشمند در ویرایشگر:** در ویرایشگر بلوک پنل کناری و در ویرایشگر کلاسیک متا‌باکس؛ پیشنهاد عنوان، تولید محتوا، بهبود سئو (با امتیاز)، پیشنهاد خلاصه، بازنویسی بلوک انتخابی و دستور دلخواه روی هر فیلد (شناسایی‌شده از جمله فیلدهای سفارشی). هیچ تغییری بدون تأیید کاربر اعمال نمی‌شود.
-* **دکمهٔ سراسری:** دکمهٔ پنل هوشمند در نوار مدیریت در همهٔ صفحات وردپرس (قابل خاموش کردن از تنظیمات).
-* **لاگ و مصرف:** کارت‌های آماری توکن‌ها، تعداد فراخوانی، پست‌های تولیدشده و لاگ رویدادها.
+هنگام کار روی یک مطلب، پنل کنار ویرایشگر بلوک و متاباکس ویرایشگر کلاسیک عنوان پیشنهادی، متن بدنه، خلاصه، امتیاز سئو و بازنویسی بلوک انتخابی را در دسترس می‌گذارند. روی هر فیلد دیگر هم می‌شود دستور دلخواه نوشت، از جمله فیلدهای سفارشی. هیچ چیز خودکار در پست نوشته نمی‌شود: نتیجه اول نمایش داده می‌شود و فقط با تأیید تو اعمال می‌شود.
 
-سازگار با افزونه‌های Yoast SEO، RankMath و All in One SEO برای متادیتای سئو.
+برای انتشار منظم می‌توان برای هر پست‌تایپ یک برنامه روزانه ساخت؛ چند مطلب در روز، در یک بازه زمانی یا در ساعت‌های مشخص، با موضوعاتی که خودت انتخاب می‌کنی. اجرا با WP-Cron انجام می‌شود و وضعیت اسلات‌های امروز جلوی چشم است. اگر سایت پر از مطلب نیمه‌کاره باشد، ویرایش گروهی با فیلتر پیدا می‌کند کدام پست‌ها محتوا، عنوان، خلاصه، تصویر شاخص یا توضیح متا ندارند و دسته‌جمعی کاملشان می‌کند.
+
+در تنظیمات، کلید API، آدرس سرویس، مدل، دما، زبان محتوا و زبان رابط تعیین می‌شود و دکمهٔ تست اتصال بلافاصله نتیجه را برمی‌گرداند. کلید API رمزنگاری‌شده ذخیره می‌شود. لاگ رویدادها و آمار مصرف (فراخوانی‌ها، توکن‌ها و مطالب تولیدشده) هم در همان صفحه است تا هزینه‌ها از دستت در نرود. کد افزونه ماژولار نوشته شده — کلاینت API، زمان‌بند، ویرایشگر گروهی، دستیار ویرایشگر و REST API نسخه‌دار هر کدام جدا هستند — و متادیتای سئو با Yoast SEO، RankMath و All in One SEO هماهنگ است.
+
+== English ==
+
+This plugin connects WordPress to any OpenAI-compatible service, so writing and editing content takes a few simple paths instead of a separate tab for every small task.
+
+While working on a post, a sidebar panel in the block editor and a meta box in the classic editor offer a suggested title, body text, an excerpt, an SEO score, and a rewrite of the selected block. A custom instruction can be run on any other field as well, custom fields included. Nothing is written to the post on its own: every result is shown first and applied only after you confirm it.
+
+For steady publishing, each post type can have a daily plan — how many posts per day, inside a time window or at fixed hours, on topics you pick. Runs are handled by WP-Cron, and today's slots are visible at a glance. If the site is full of half-finished posts, the bulk editor finds the ones missing content, a title, an excerpt, a featured image, or a meta description, and completes them as a batch with live progress.
+
+Settings hold the API key, endpoint, model, temperature, content language, and interface language, with a connection test that reports back immediately. The key is stored encrypted. Event logs and usage figures — calls, tokens, generated posts — sit on the same screen so costs stay visible. The code is modular, with the API client, scheduler, bulk editor, editor assistant, and versioned REST API kept apart, and its SEO metadata works with Yoast SEO, RankMath, and All in One SEO.
 
 == Installation ==
 
-1. پوشهٔ `content-assistant` را در `wp-content/plugins/` آپلود کنید.
-2. افزونه را فعال کنید.
-3. به «هوش مصنوعی ← تنظیمات» بروید، کلید API را وارد کنید و «تست اتصال» را بزنید.
-4. در «زمان‌بندی تولید» برای هر پست‌تایپ برنامهٔ روزانه بسازید.
+= فارسی =
+1. پوشهٔ افزونه را در `wp-content/plugins/` قرار بده و فعالش کن.
+2. در «هوش مصنوعی ← تنظیمات»، کلید API و مدل را وارد کن و «تست اتصال» را بزن.
+3. اگر تولید خودکار می‌خواهی، در «زمان‌بندی تولید» برای هر پست‌تایپ یک برنامه بساز.
+4. در «ویرایش گروهی» فیلترها را بگذار و ببین چه چیزهایی برای تکمیل پیدا می‌شود.
+
+= English =
+1. Put the plugin folder in `wp-content/plugins/` and activate it.
+2. Under Settings, enter the API key and model, then run the connection test.
+3. For automatic publishing, build a daily plan per post type under Scheduling.
+4. Open Bulk Editor and check what still needs content, titles, or SEO fields.
 
 == Frequently Asked Questions ==
 
-= زبان رابط کاربری را چطور عوض کنم؟ =
+= زبان رابط را چطور عوض کنم؟ =
 
-در بالای هر صفحهٔ افزونه یک سوییچر سه‌حالته (خودکار / فارسی / English) هست؛ یا در «تنظیمات ← عمومی و API» گزینهٔ «زبان رابط کاربری» را تغییر دهید.
+بالای هر صفحهٔ افزونه یک سوییچر سه‌حالته (خودکار / فارسی / English) هست؛ یا از تنظیمات، گزینهٔ «زبان رابط کاربری» را تغییر بده. هر دو جهت RTL و LTR پشتیبانی می‌شوند.
 
-= پست‌ها کجا ذخیره می‌شوند؟ =
+= How do I change the interface language? =
 
-در پست‌تایپ انتخابی، با وضعیتی که در تنظیمات یا زمان‌بندی تعیین کرده‌اید (پیش‌فرض: پیش‌نویس).
+Every plugin screen has a three-way switcher (Auto / Persian / English). You can also set the interface language under Settings. Both RTL and LTR are supported.
 
-= برای اجرا نیاز به بازدید سایت است؟ =
+= مطلب تولیدشده کجا ذخیره می‌شود؟ =
 
-WP-Cron با بازدید اجرا می‌شود؛ برای سایت‌های کم‌ترافیک یک Cron واقعی سیستمی هر ۵ دقیقه تنظیم کنید: `wp-cron.php?doing_wp_cron`
+در همان پست‌تایپی که انتخاب کرده‌ای، با وضعیتی که در تنظیمات یا زمان‌بندی گذاشته‌ای (پیش‌فرض: پیش‌نویس).
+
+= Where do generated posts go? =
+
+Into the post type you selected, with the status set in the settings or the schedule — drafts by default.
+
+= برای اجرای زمان‌بندی به بازدید نیاز است؟ =
+
+WP-Cron با بازدید سایت اجرا می‌شود. برای سایت کم‌ترافیک بهتر است یک کرون سیستمی هر ۵ دقیقه روی `wp-cron.php` تنظیم کنی.
+
+= Does scheduling need traffic? =
+
+WP-Cron runs on visits. On a low-traffic site, point a real system cron at `wp-cron.php` every five minutes instead.
 
 == Changelog ==
 
 = 1.2.0 =
-* تغییر نام افزونه به «هوش مصنوعی برای وردپرس».
-* نویسنده: Hamid Ahangaryan (ahangaryan.ir).
-* رابط کاملاً دوزبانه (فارسی/انگلیسی) با سوییچر زبان فوری؛ پشتیبانی کامل RTL/LTR.
-* بازطراحی مدرن صفحات ادمین: سربرگ برند، تب‌ها، کارت‌ها، سوییچ‌ها، کارت‌های آماری و فوتر شرکت (ahangaryan.ir).
-* نمایش بصری اسلات‌های زمان‌بندی روزانه (انجام‌شده/باقی‌مانده).
-* نمایش وضعیت کلید API و دکمهٔ نمایش/مخفی کلید.
-* پنل هوشمند در ویرایشگر با UI/UX بهبود یافته.
-* استفاده از آیکن‌های داش‌آیکن وردپرس.
+* رابط دوزبانه با سوییچر فوری زبان و پشتیبانی کامل RTL/LTR.
+* بازطراحی صفحات مدیریت با تب‌ها، کارت‌های آماری و نمایش بصری اسلات‌های روزانه.
+* نمایش وضعیت کلید API و امکان مخفی کردن آن.
+* بهبود پنل دستیار در ویرایشگر.
 
 = 1.1.0 =
-* تغییر نام افزونه به «هوش‌یار وردپرس».
-* رابط کاملاً دوزبانه (فارسی/انگلیسی) با سوییچر زبان فوری؛ پشتیبانی کامل RTL/LTR.
-* بازطراحی مدرن صفحات ادمین: سربرگ برند، تب‌ها، کارت‌ها، سوییچ‌ها، کارت‌های آماری و فوتر شرکت (ahangaryan.ir).
-* نمایش بصری اسلات‌های زمان‌بندی روزانه (انجام‌شده/باقی‌مانده).
-* نمایش وضعیت کلید API و دکمهٔ نمایش/مخفی کلید.
+* رابط دوزبانه و بازطراحی صفحات مدیریت.
+* نمایش اسلات‌های زمان‌بندی و وضعیت کلید API.
 
 = 1.0.0 =
 * نسخهٔ اولیه.
-
-== Arbitrary section ==
-
-ساخته و پشتیبانی: **Hamid Ahangaryan** — [ahangaryan.ir](https://ahangaryan.ir)
